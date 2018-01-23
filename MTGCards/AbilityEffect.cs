@@ -6,10 +6,14 @@ namespace MTGCards
 {
     public class AbilityEffect
     {
-        public bool IsTriggered;
+        //ex. creature losses flying
+        public bool IsSuppressed;
+
+        public AbilityEffectType EffectType;
+
         public AbilityEffectTimeTrigger Time;
         public AbilityEffectEvent Event;
-        public AbilityEffectType EffectType;
+        
         public AbilityEffectTarget Target;
         public AbilityEffectTimeSpan TimeSpan;
         public AbilityEffectTargetPlayer TargetPlayer;

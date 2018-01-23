@@ -1,13 +1,15 @@
-﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MTGCards;
 using System.Collections.Generic;
-using System.Text;
 
-namespace MTGCards
+namespace MTGCardsTests
 {
-    public static class CardFactory
+    [TestClass]
+    public class UnitTest1
     {
-
-        public static Card createScarabGod() {
+        [TestMethod]
+        public void CreateScarabGod()
+        {
             var result = new Card();
             result.Legality = new CardLegality()
             {
@@ -118,10 +120,10 @@ namespace MTGCards
                 }
             });
 
-            return result;
         }
 
-        public static Card createAngelOfCSanctions() {
+        [TestMethod]
+        public void CreateAngelOfSanctions() {
             var result = new Card();
 
             result.Name = "Angel of Sanctions";
@@ -142,7 +144,8 @@ namespace MTGCards
             result.CardSet.Block = "Amonkhet";
 
             result.Abilities = new List<Ability>();
-            result.Abilities.Add(new Ability() {
+            result.Abilities.Add(new Ability()
+            {
                 Description = "Flying",
                 Effects = new List<AbilityEffect>() {
                     new AbilityEffect(){
@@ -167,10 +170,12 @@ namespace MTGCards
                 },
             });
 
-            result.Abilities.Add(new Ability() {
+            result.Abilities.Add(new Ability()
+            {
                 Name = "Embalm",
                 Description = "Embalm 5W (5W, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)",
-                ManaCost = new CardCost() {
+                ManaCost = new CardCost()
+                {
                     ColorCost = new List<ColorCost>() {
                         new ColorCost(){ Amount = 5, Color = Color.NoColor },
                         new ColorCost(){ Amount = 1, Color = Color.White }
@@ -203,8 +208,6 @@ namespace MTGCards
                     }
                 }
             });
-
-            return result;
 
         }
     }
