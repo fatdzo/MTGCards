@@ -87,6 +87,7 @@ namespace MTGCards
         Trample,
         Haste,
         DoubleStrike,
+        Lifelink,
 
         EachOpponentLoseLife,
         PlayerGainsLife,
@@ -97,10 +98,11 @@ namespace MTGCards
         CreateATokenCopy,
         ReturnToHand,
         AllCreaturesLoseIndestructible,
-        CreatureDies,
         ExileTargetNonlandPermanent,
         EnterTheBattleField,
-        Embalm
+        Embalm,
+
+        PutPlus11Counter
     }
 
     //Defines the target which the ability effects. 
@@ -117,7 +119,8 @@ namespace MTGCards
         AllCreatures,
         AllArtifacts,
         AllPermanents,
-        AllPlaneswalkers
+        AllPlaneswalkers,
+        OtherCreatures
     }
 
     //Defines if the ability affects certain player
@@ -139,5 +142,12 @@ namespace MTGCards
         AGraveyard,
         Library,
         OwnersHand
+    }
+
+    public enum CardRarity {
+        Common,
+        Uncommon,
+        Rare,
+        Mythic
     }
 }

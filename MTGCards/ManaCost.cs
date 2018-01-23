@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MTGCards
 {
-    public class CardCost
+    public class ManaCost
     {
         public int CMC {
 

@@ -13,7 +13,9 @@ namespace MTGCards
 
         public CardSet CardSet;
 
-        public CardCost Cost;
+        public CardRarity Rarity;
+
+        public ManaCost Manacost;
 
         public List<CardType> MainType;
         public List<CardType> SubType;

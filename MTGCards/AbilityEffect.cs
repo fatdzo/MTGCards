@@ -10,7 +10,7 @@ namespace MTGCards
         public bool IsSuppressed;
 
         public AbilityEffectType EffectType;
-        public AbilityEffectTimeTrigger Time;
+        public AbilityEffectTimeTrigger TurnStep;
         public AbilityEffectEvent Event;
         public AbilityEffectTarget Target;
         public AbilityEffectTimeSpan TimeSpan;
