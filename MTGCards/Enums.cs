@@ -72,7 +72,7 @@ namespace MTGCards
     public enum AbilityEffectEvent
     {
         None,
-        ThisCreatureDies,
+        CreatureDies,
         AnyCreatureDies,
         DealtDamageToPlayer,
         PlayerDealtDamage
@@ -95,11 +95,11 @@ namespace MTGCards
         ExileCard,
         CreateAToken,
         CreateATokenCopy,
-        ReturnToOwnersHand,
+        ReturnToHand,
         AllCreaturesLoseIndestructible,
-
+        CreatureDies,
         ExileTargetNonlandPermanent,
-
+        EnterTheBattleField,
         Embalm
     }
 
@@ -137,6 +137,7 @@ namespace MTGCards
         YourGraveyard,
         OpponentGraveyard,
         AGraveyard,
-        Library
+        Library,
+        OwnersHand
     }
 }

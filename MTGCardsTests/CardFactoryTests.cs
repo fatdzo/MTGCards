@@ -113,9 +113,13 @@ namespace MTGCardsTests
                 Description = "When The Scarab God dies, return it to its owner's hand at the beginning of the next end step.",
                 Effects = new List<AbilityEffect>() {
                     new AbilityEffect(){
-                        EffectType = AbilityEffectType.ReturnToOwnersHand,
+                        EffectType = AbilityEffectType.CreatureDies,
+                        Target = AbilityEffectTarget.ThisCard
+                    },
+                    new AbilityEffect(){
+                        EffectType = AbilityEffectType.ReturnToHand,
                         Time = AbilityEffectTimeTrigger.End,
-                        Event = AbilityEffectEvent.ThisCreatureDies,
+                        Location = AbilityEffectLocation.OwnersHand
                     }
                 }
             });
@@ -125,6 +129,14 @@ namespace MTGCardsTests
         [TestMethod]
         public void CreateAngelOfSanctions() {
             var result = new Card();
+
+            result.Legality = new CardLegality()
+            {
+                Commander = true,
+                Modern = true,
+                Standard = true,
+                Vintage = true
+            };
 
             result.Name = "Angel of Sanctions";
             result.Cost = new CardCost();
@@ -161,6 +173,10 @@ namespace MTGCardsTests
             {
                 Description = "When Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield. ",
                 Effects = new List<AbilityEffect>() {
+                    new AbilityEffect(){
+                        EffectType = AbilityEffectType.EnterTheBattleField,
+                        Target = AbilityEffectTarget.ThisCard
+                    },
                     new AbilityEffect(){
                         EffectType = AbilityEffectType.ExileTargetNonlandPermanent,
                         Target = AbilityEffectTarget.Permanent,
