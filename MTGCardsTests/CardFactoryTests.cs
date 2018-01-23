@@ -95,14 +95,16 @@ namespace MTGCardsTests
                         Target = AbilityEffectTarget.Creature,
                         Location = AbilityEffectLocation.Battlefield,
                         Time = AbilityEffectTimeTrigger.Immediate,
-                        Power = 4,
-                        Toughness = 4,
-                        MainType = new List<CardType>(){
-                            new CardType(){ Name = "Creature" }
-                        },
-                        SubType = new List<CardType>(){
-                            new CardType(){ Name = "Zombie" },
-                            new CardType(){ Name = "Black" }
+                        CreatureToken = new AbilityCreatureToken(){
+                            Power = 4,
+                            Toughness = 4,
+                            MainType = new List<CardType>(){
+                                new CardType(){ Name = "Creature" }
+                            },
+                            SubType = new List<CardType>(){
+                                new CardType(){ Name = "Zombie" },
+                                new CardType(){ Name = "Black" }
+                            }
                         }
                     }
                 }
@@ -208,18 +210,20 @@ namespace MTGCardsTests
                         EffectType = AbilityEffectType.CreateATokenCopy,
                         Target = AbilityEffectTarget.ThisCard,
                         Location = AbilityEffectLocation.Battlefield,
-                        ManaCost = new CardCost(){
-                            ColorCost = new List<ColorCost>(){
-                                new ColorCost(){ Amount = 0, Color = Color.White }
+                        CreatureToken = new AbilityCreatureToken(){
+                            ManaCost = new CardCost(){
+                                ColorCost = new List<ColorCost>(){
+                                    new ColorCost(){ Amount = 0, Color = Color.White }
+                                }
+                            },
+                            MainType = new List<CardType>(){
+                                new CardType(){ Name = "Creature"}
+                            },
+                            SubType = new List<CardType>(){
+                                new CardType(){ Name = "White" },
+                                new CardType(){ Name = "Zombie" },
+                                new CardType(){ Name = "Angel" }
                             }
-                        },
-                        MainType = new List<CardType>(){
-                            new CardType(){ Name = "Creature"}
-                        },
-                        SubType = new List<CardType>(){
-                            new CardType(){ Name = "White" },
-                            new CardType(){ Name = "Zombie" },
-                            new CardType(){ Name = "Angel" }
                         }
                     }
                 }
