@@ -150,4 +150,10 @@ namespace MTGCards
         Rare,
         Mythic
     }
+
+    public enum CardState {
+        none,
+        Tapped,
+        Untapped
+    }
 }

@@ -9,5 +9,6 @@ namespace MTGCards
         public string Name;
         public int Year;
         public string Block;
+        public string Set;
     }
 }

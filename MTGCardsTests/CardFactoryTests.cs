@@ -279,7 +279,6 @@ namespace MTGCardsTests
             result.Abilities = new List<Ability>();
             result.Abilities.Add(new Ability()
             {
-                RequiresTap = false,
                 Description = "Flying",
                 Effects = new List<AbilityEffect>() {
                     new AbilityEffect(){
@@ -293,7 +292,6 @@ namespace MTGCardsTests
 
             result.Abilities.Add(new Ability()
             {
-                RequiresTap = false,
                 Description = "When Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield. ",
                 Effects = new List<AbilityEffect>() {
                     new AbilityEffect(){
@@ -311,7 +309,6 @@ namespace MTGCardsTests
 
             result.Abilities.Add(new Ability()
             {
-                RequiresTap = false,
                 Name = "Embalm",
                 Description = "Embalm 5W (5W, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)",
                 ManaCost = new ManaCost()

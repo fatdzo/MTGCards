@@ -10,5 +10,6 @@ namespace MTGCards
         public bool Modern;
         public bool Commander;
         public bool Vintage;
+        public bool Legacy;
     }
 }

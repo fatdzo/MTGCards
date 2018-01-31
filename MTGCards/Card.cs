@@ -20,12 +20,11 @@ namespace MTGCards
         public List<CardType> MainType;
         public List<CardType> SubType;
 
-        public int Power;
-        public int Toughness;
+        public int? Power;
+        public int? Toughness;
+        //In case the card type is a planeswalker
+        public int? Loyalty;
 
         public List<Ability> Abilities;
-
-        public Card() {
-        }
     }
 }
